@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div class style="color:White;">
+      <p class="heading">{{post.title}}</p></div>
+
+      {% if post.clip %}
+        <pre class="v_text">
+              
+          
+           {{post.content}} </pre>
+        <video class="video" controls src="{{post.clip.url}}" type="video/mp4" preload="auto" ></video>
+        
+<br>
+<pre >                                                                    NOTE: Download and view.</pre>
+     {% else %}
+     <div class="content">
+       <pre class="post">
+
+        {{post.content}}
+       </pre>
+     </div>
+   {% endif %}
+    
+
+
+    
+    <style>
+       *{
+      margin: 0;
+      padding: 0;
+      border:none;
+      outline: none;
+      box-sizing: border-box;
+      -webkit-tap-highlight-color:transparent;
+    }
+    
+    .v_text{
+        /*position: relative;*/
+        margin-top: 3px;
+        margin-bottom: 0px;
+        margin-left: 28%;
+        white-space: pre;
+        line-height: 1.4; 
+        line-height: 1.4;
+        font-size:29px;
+        font-family:Optima, sans-serif;
+    }
+    .video{
+      width:320px; height:240px;
+      display: block;
+      margin: 0 auto;
+      
+
+    }
+    /*#grad1 {
+       height: 100px;
+       background-image: linear-gradient(-90deg, #240b36 , #c31432);
+     }*/
+      .heading{
+        height: 100px;
+       background-image: linear-gradient(-90deg, #240b36 , #c31432);
+        font-size: 40px;
+        font-family:Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif ;
+        /*position: fixed;*/
+      top:0;
+      left:0;
+      right: 0;
+      padding: 2rem;
+      }
+.content{
+  white-space: pre;
+}
+      .content .post{
+        white-space: pre;
+        line-height: 1.8;
+        font-size:25px;
+        font-family:Optima, sans-serif;
+         word-spacing: 2px;
+      }
+    </style>
+  </body>
+</html> 
+
+
+<!-- <h1>{{post.title}}</h1>
+{{post.content}} -->
